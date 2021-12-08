@@ -135,7 +135,7 @@ include:
                                 {%- endif %}
 
                             {%- endif %}
-                            {%- set path = '/var/log/mongodb/' ~ servicename ~ '.log' %}
+                            {%- set path = '/var/log/' ~ servicename ~ '/' ~ servicename ~ '.log' %}
                             {%- if 'systemLog' in config and 'destination' in config['systemLog'] %}
                                 {%- if config['systemLog']['destination'] == 'file'  %}
                                     {%- if 'path' in config['systemLog'] %}
