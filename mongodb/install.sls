@@ -248,7 +248,7 @@ include:
         user: {{ software['user'] }}
         group: {{ software['group'] }}
         stop: ''
-        start: {{ software['path'] }}/bin/{{ name }} --config /etc/mongodb/mongod.conf
+        start: {{ software['path'] }}/bin/{{ name }} --config /etc/mongodb/{{ name }}.conf
     - watch_in:
       - cmd: {{ formula }}-{{ comp }}-{{ service.name }}-install-service-systemd
   cmd.run:
